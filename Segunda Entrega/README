@@ -1,1 +1,2 @@
-En esta carpeta se encuentran las implementaciones de las estructuras: montículos, conjuntos disyuntos, árboles BST y AVL. Cada una tiene su propio código y se encuentran en sus carpetas `src`.
+En esta carpeta se encuentran las implementaciones de las estructuras: montículos, conjuntos disyuntos, árboles BST y AVL. Cada una tiene su propio código y se encuentran en las carpetas src. 
+Cada estructura se implemento de diferentes maneras por lo cual en las carpetas se encontrarán distintos códigos que representan cada variante de la estructura.
