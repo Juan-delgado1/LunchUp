@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solicitudes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0; /* Cambiado a 0 para que no haya espacio alrededor del fondo */
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Fondo con blur */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("images/fondo-citas.jpeg") no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(5px); /* Aplicar desenfoque solo al fondo */
+            z-index: -1; /* Mantener el fondo detrás del contenido */
+        }
+
+        /* Contenedor de la página para sobreponer el contenido sobre el fondo */
+        .content {
+            position: relative;
+            z-index: 1;
+            filter: none; /* Asegurarnos de que el contenido no esté desenfocado */
+            padding: 20px; /* Espaciado alrededor del contenido */
+        }
+
+        h1 {
+            text-align: center;
+            color: #f88a0c; /* Color del texto */
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-shadow: -1px -1px 0 #000, /* Sombra superior izquierda */
+                         1px -1px 0 #000,  /* Sombra superior derecha */
+                         -1px 1px 0 #000,  /* Sombra inferior izquierda */
+                         1px 1px 0 #000;    /* Sombra inferior derecha */
+            letter-spacing: 1px;
+        }
+
+        /* Estilo de la tabla */
+        #tablaSolicitudes {
+            background-color: white; /* Fondo blanco para la tabla */
+            border-radius: 5px; /* Bordes redondeados */
+            overflow: hidden; /* Para asegurarse de que los bordes redondeados se mantengan */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para la tabla */
+        }
+
+        /* Centrar texto en los encabezados de la tabla */
+        th {
+            text-align: center; /* Centrar texto horizontalmente */
+            vertical-align: middle; /* Centrar texto verticalmente */
+        }
+        
+        /* Animación para desvanecer una fila */
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div> <!-- El fondo con blur -->
+    
+    <div class="content">
+        <h1>Solicitudes de Almuerzo</h1>
+
+        <!-- Tabla para mostrar las solicitudes -->
+        <table id="tablaSolicitudes" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Carrera</th>
+                    <th>Lugar</th>
+                    <th>Invitación</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de la tabla se llenarán dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Incluir el script para solicitudes.js -->
+    <script src="solicitudes.js"></script>
+</body>
+</html>
